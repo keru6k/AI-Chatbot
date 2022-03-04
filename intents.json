@@ -1,39 +1,53 @@
 {"intents": [
         {"tag": "greeting",
          "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
-         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+         "responses": ["Hello! Welcome to Keru's Convenience store", "Good to see you again!", "Hi there, how can I help?"],
          "context_set": ""
         },
         {"tag": "goodbye",
          "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
-         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+         "responses": ["Thank you for being a loyal customer!", "Thank you for being a customer!", "Goodbye!", "Ciao!"],
          "context_set": ""
         },
         {"tag": "age",
          "patterns": ["how old", "how old is ker", "what is your age", "how old are you", "age?"],
-         "responses": ["I am 16 years old!", "16 years young!"],
+         "responses": ["I am 16 years old!", "16! still young!"],
          "context_set": ""
         },
         {"tag": "name",
-         "patterns": ["what is your name", "what should I call you", "whats your name?"],
-         "responses": ["You can call me Ker.", "I'm Ker!", "I'm Ker. Pleasure to meet you."],
-         "context_set": ""
-        },
-        {"tag": "shop",
-         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
+         "patterns": ["what is your name", "what should I call you", "whats your name?", "who are you?"],
+         "responses": ["You can call me Ker.", "I'm Ker! Owner of this fine establishment", "I'm Ker. Pleasure to meet you."],
          "context_set": ""
         },
         {"tag": "hours",
          "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
-         "responses": ["We are open 7am-4pm Monday-Friday!"],
+         "responses": ["We are open 24 hours every Monday-Friday!"],
          "context_set": ""
         },
         {"tag": "me",
          "patterns": ["tell me about yourself", "about yourself?", "introduce yourself"],
-         "responses": ["i'm Ker, And i am 16. I'm currently working on my skills in machine learning!"],
+         "responses": ["i'm Ker, And i am 16. I'm currently working on my skills in machine learning!", "I'm the owner of this establishment."],
+         "context_set": ""
+        },
+        {
+         "tag": "shop",
+         "patterns": ["what do you offer?", "what do you sell?"],
+         "responses": ["Currently, We only have Apples in stock, because most of the customers prefers Oranges."],
+         "context_set": ""
+        },
+        {
+         "tag": "buy",
+         "patterns": ["can i buy?", "apples, please.", "then i will take the apple.", "i want to buy an apple.", "i would take an apple"],
+         "responses": ["An apple it is!"],
+         "context_set": ""
+        },
+        {
+         "tag": "easteregg",
+         "patterns": ["kingsmen"],
+         "responses": ["Ah, A regular! *opens the storage compartment full of oranges* Here you go, Take as much as you want"],
          "context_set": ""
         }
+         
 
    ]
 }
