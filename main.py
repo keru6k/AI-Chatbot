@@ -1,3 +1,5 @@
+# Made wit luv by k6r <3
+# First ever AI i've created
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
@@ -67,6 +69,7 @@ except:
 
 tensorflow.compat.v1.reset_default_graph()
 
+# Trains bot with 8 neurons using softmax algorithm
 net = tflearn.input_data(shape=[None, len(training[0])])
 net = tflearn.fully_connected(net, 8)
 net = tflearn.fully_connected(net, 8)
@@ -75,9 +78,11 @@ net = tflearn.regression(net)
 
 model = tflearn.DNN(net)
 
-
-model.fit(training, output, n_epoch=10000, batch_size=8, show_metric=True)
-model.save("model.tflearn")
+try:
+    model.load("model.tflearn")
+except:
+    model.fit(training, output, n_epoch=10000, batch_size=8, show_metric=True)
+    model.save("model.tflearn")
 
 
 def bag_of_words(s, words):
